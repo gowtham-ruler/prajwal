@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Warriors of Mahishmati | Baahubali</title>
+
+    <link rel="stylesheet" href="b.css">
+    <script src="js.js" defer></script>
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">⚔ MAHISHMATI</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="page1.html">Warriors</a>
+            <a href="page2.html">The Legend</a>
+        </nav>
+
+    </header>
+
+    <section class="page-banner">
+
+        <p class="subtitle">THE FATE OF A KINGDOM</p>
+
+        <h1>WARRIORS OF MAHISHMATI</h1>
+
+        <p>Greatness is not given. It is proven.</p>
+
+    </section>
+
+    <main class="content-section">
+
+        <h2>Choose Your Favourite Warrior</h2>
+
+        <p>
+            Every warrior has a destiny.
+            Choose your champion and enter the legendary kingdom.
+        </p>
+
+        <form id="warrior-form" action="page2.html" method="get">
+
+            <label for="visitor">Enter Your Name:</label>
+            <br>
+
+            <input
+                type="text"
+                id="visitor"
+                name="visitor"
+                placeholder="Your name"
+                maxlength="40"
+            >
+
+            <br><br>
+
+            <h2>01. Baahubali</h2>
+
+            <img
+                src="https://upload.wikimedia.org/wikipedia/en/7/7e/Baahubali_The_Beginning_poster.jpg"
+                width="180"
+                alt="Baahubali movie poster"
+            >
+
+            <p>
+                The brave warrior who fights for justice,
+                courage and the people of Mahishmati.
+            </p>
+
+            <label>
+                <input
+                    type="radio"
+                    name="warrior"
+                    value="Baahubali"
+                    required
+                >
+                Choose Baahubali
+            </label>
+
+            <hr>
+
+            <h2>02. Bhallaladeva</h2>
+
+            <img
+                src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=500&q=80"
+                width="180"
+                alt="Dramatic ancient landscape"
+            >
+
+            <p>
+                The powerful prince whose ambition
+                challenges the future of the kingdom.
+            </p>
+
+            <label>
+                <input
+                    type="radio"
+                    name="warrior"
+                    value="Bhallaladeva"
+                >
+                Choose Bhallaladeva
+            </label>
+
+            <hr>
+
+            <h2>03. Devasena</h2>
+
+            <img
+                src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=500&q=80"
+                width="180"
+                alt="Powerful ocean waves"
+            >
+
+            <p>
+                The fearless princess who stands for dignity,
+                independence and courage.
+            </p>
+
+            <label>
+                <input
+                    type="radio"
+                    name="warrior"
+                    value="Devasena"
+                >
+                Choose Devasena
+            </label>
+
+            <hr>
+
+            <h2>04. Sivagami</h2>
+
+            <img
+                src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=500&q=80"
+                width="180"
+                alt="Majestic mountain landscape"
+            >
+
+            <p>
+                The powerful royal mother whose decisions
+                shape the destiny of Mahishmati.
+            </p>
+
+            <label>
+                <input
+                    type="radio"
+                    name="warrior"
+                    value="Sivagami"
+                >
+                Choose Sivagami
+            </label>
+
+            <hr>
+
+            <h2>Choose Your Favourite Motto</h2>
+
+            <select name="dialogue" required>
+
+                <option value="Dharma">Dharma Must Win!</option>
+
+                <option value="Mahishmati">
+                    Long Live Mahishmati!
+                </option>
+
+                <option value="Courage">
+                    Courage and Sacrifice
+                </option>
+
+                <option value="Baahubali">
+                    Baahubali Forever!
+                </option>
+
+            </select>
+
+            <br><br>
+
+            <button type="submit" class="btn gold">
+                CONTINUE TO THE LEGEND ↗
+            </button>
+
+            <p id="form-message" role="status"></p>
+
+        </form>
+
+        <br>
+
+        <a href="index.html" class="btn outline">
+            ← BACK TO HOME
+        </a>
+
+    </main>
+
+    <footer>
+        <h3>⚔ MAHISHMATI</h3>
+        <p>DHARMA • COURAGE • SACRIFICE</p>
+    </footer>
+
+</body>
+</html>

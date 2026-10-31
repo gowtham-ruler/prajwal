@@ -1,0 +1,451 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #d9ad55;
+    --light-gold: #ffe4a0;
+    --black: #090807;
+    --dark: #15110c;
+    --white: #f5efe4;
+    --grey: #b9ae9c;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Manrope', Arial, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    min-height: 78px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(9, 8, 7, 0.97);
+    border-bottom: 1px solid rgba(217, 173, 85, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: var(--light-gold);
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 32px;
+}
+
+.navbar nav a {
+    color: #d6cbb9;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--light-gold);
+}
+
+/* HOME HERO */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(9, 8, 7, 0.98) 0%,
+            rgba(9, 8, 7, 0.88) 40%,
+            rgba(9, 8, 7, 0.3) 100%
+        ),
+        url('https://upload.wikimedia.org/wikipedia/en/7/7e/Baahubali_The_Beginning_poster.jpg');
+
+    background-position: center, 78% 35%;
+    background-size: cover, auto 110%;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 0;
+    animation: appear 1s ease;
+}
+
+.subtitle,
+.section-label {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: clamp(38px, 6vw, 76px);
+    line-height: 1.2;
+    margin: 25px 0;
+    max-width: 850px;
+}
+
+.hero h1 span,
+.introduction h2 span {
+    display: block;
+    color: var(--light-gold);
+}
+
+.description {
+    color: #d7cdbd;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 23px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.gold {
+    background: linear-gradient(135deg, #f8dfa0, #bf8d35);
+    color: #171007;
+    border: 1px solid var(--light-gold);
+}
+
+.gold:hover {
+    background: var(--light-gold);
+    transform: translateY(-3px);
+}
+
+.outline {
+    border: 1px solid var(--gold);
+    color: var(--light-gold);
+}
+
+.outline:hover {
+    background: rgba(217, 173, 85, 0.12);
+    transform: translateY(-3px);
+}
+
+.quote {
+    margin-top: 55px;
+    color: var(--gold);
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+/* INTRODUCTION */
+
+.introduction {
+    max-width: 900px;
+    margin: auto;
+    padding: 100px 25px;
+    text-align: center;
+}
+
+.introduction h2 {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: clamp(27px, 4vw, 43px);
+    line-height: 1.4;
+    margin: 20px 0;
+}
+
+.introduction > p:last-child {
+    color: var(--grey);
+    max-width: 700px;
+    margin: auto;
+}
+
+/* FEATURE CARDS */
+
+.features {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    position: relative;
+    min-height: 400px;
+    overflow: hidden;
+    border: 1px solid rgba(217, 173, 85, 0.3);
+    background: var(--dark);
+}
+
+.feature-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.6s;
+    filter: brightness(0.65);
+}
+
+.feature-card:hover img {
+    transform: scale(1.06);
+    filter: brightness(0.85);
+}
+
+.feature-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 28px;
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.97)
+    );
+}
+
+.feature-text h2 {
+    color: var(--light-gold);
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 27px;
+}
+
+.feature-text p {
+    color: #ddd2c0;
+    margin: 8px 0 20px;
+}
+
+.feature-text span {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* OTHER PAGES */
+
+.page-banner {
+    padding: 100px 8%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(9, 8, 7, 0.97),
+            rgba(9, 8, 7, 0.55)
+        ),
+        url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=85')
+        center / cover;
+}
+
+.page-banner h1 {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: clamp(35px, 6vw, 65px);
+    color: var(--light-gold);
+}
+
+.page-banner p {
+    color: var(--grey);
+}
+
+/* GENERAL CONTENT */
+
+.content-section {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 0;
+}
+
+.content-section h2 {
+    color: var(--light-gold);
+    font-family: 'Cinzel', Georgia, serif;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    color: var(--grey);
+    margin-bottom: 15px;
+}
+
+/* FORM ELEMENTS */
+
+input[type="text"],
+select {
+    width: 100%;
+    max-width: 450px;
+    padding: 13px;
+    margin: 10px 0;
+    background: #17130e;
+    border: 1px solid var(--gold);
+    color: var(--white);
+    font-family: inherit;
+}
+
+input[type="radio"] {
+    accent-color: var(--gold);
+}
+
+/* TABLE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+}
+
+th {
+    background: #39240f;
+    color: var(--light-gold);
+    text-align: left;
+}
+
+th,
+td {
+    padding: 15px;
+    border: 1px solid rgba(217, 173, 85, 0.3);
+}
+
+td {
+    color: var(--grey);
+}
+
+/* FOOTER */
+
+footer {
+    padding: 35px 7%;
+    text-align: center;
+    border-top: 1px solid rgba(217, 173, 85, 0.25);
+    background: #0d0b08;
+}
+
+footer h3 {
+    color: var(--light-gold);
+    font-family: 'Cinzel', Georgia, serif;
+    letter-spacing: 3px;
+}
+
+footer p {
+    color: var(--grey);
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/* ANIMATION */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        background-position: center, 65% center;
+        background-size: cover, auto 100%;
+    }
+
+    .hero-content {
+        width: 90%;
+    }
+
+    .subtitle,
+    .section-label {
+        letter-spacing: 2px;
+    }
+
+    .features {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card,
+    .feature-card img {
+        min-height: 340px;
+        height: 340px;
+    }
+
+    .introduction {
+        padding: 70px 20px;
+    }
+
+    .page-banner {
+        padding: 75px 6%;
+    }
+
+    .content-section {
+        width: 90%;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
